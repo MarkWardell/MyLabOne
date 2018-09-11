@@ -40,6 +40,12 @@ namespace HelloConsole
                     }
                 case 2:
                     {
+                        if (IsNum(args[0]) && IsNum(args[1]))
+                        {
+                            nameStr = args[0];
+                            ageStr = args[1];
+                        }
+                        else 
                         if (IsNum(args[0]))
                         {
                             ageStr = args[0];

@@ -1,19 +1,16 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HelloConsole
 {
     class Program
     {
         static void Main(string[] args)
-        {
+        {  
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             string nameStr = String.Empty;
             string ageStr = String.Empty;
+            
             switch (args.Length)
             {
 
@@ -40,6 +37,7 @@ namespace HelloConsole
                     }
                 case 2:
                     {
+                        System.Diagnostics.Debugger.Break();
                         if (IsNum(args[0]) && IsNum(args[1]))
                         {
                             nameStr = args[0];
@@ -81,13 +79,14 @@ namespace HelloConsole
 
         private static bool IsNum(string v)
         {
-            return int.TryParse(v , out int n);
+            int n;
+            return int.TryParse(v , out  n);
 
         }
 
         private static string PromptAge()
         {
-            bool ageCaptured = false;
+            bool ageCaptured = false;.
             string ageStr = string.Empty;
             do
             {
